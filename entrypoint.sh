@@ -18,7 +18,8 @@ npm install hexo-deployer-git --save
 
 hexo g
 
-sed -i 's,<url>/search,<url>,g' public/search.xml
+sed -i  's,<link href="20,<link href="../20,g' public/search.xml
+sed -i  's,<url>20,<url>../20,g' public/search.xml
 
 # deployment
 if [ "$INPUT_COMMIT_MSG" = "none" ]
